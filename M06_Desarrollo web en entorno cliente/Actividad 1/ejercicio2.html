@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Mi primera p&aacute;gina Web</title>
+		<style>
+			body {
+			background: orange;
+			}
+		</style> 
+		<script>
+			let person = prompt("Por favor introduce tu nombre: ");
+			document.write('Bienvenido '+ person+'<br>');
+			function btnchange(){
+				const texacambiar = document.getElementById("btn").innerHTML = "Texto cambiado";
+			}
+		</script>
+	</head>
+	<body>
+		<p style="font-size: x-large">Bienvenido a mi página</p>
+		<img src="imagen.jpg" alt="Asa Mitaka">
+		<a href="https://chainsaw-man.fandom.com/es/wiki/Asa_Mitaka"><br>Wikipedia<br></a>
+		<button id="btn" onclick="btnchange();">Pulsame para cambiar texto</button>
+	</body>
+</html>
