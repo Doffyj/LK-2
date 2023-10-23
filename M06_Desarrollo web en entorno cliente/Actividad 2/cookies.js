@@ -1,4 +1,4 @@
-//Ejercicio 1
+//Punto 1
 //cnombre -> username, cvalue ->tipo de usuario (user), cduracion -> duracion en dias que pasaremos a ms
 function crearCookie(cnombre, cvalue, cduracion){
 	const d = new Date();
@@ -7,11 +7,21 @@ function crearCookie(cnombre, cvalue, cduracion){
 	document.cookie = cnombre + "=" + cvalue + ";" + expira + ";path=/";
 }
 
-//Ejercicio 2
+//Punto 2
 crearCookie("Juan", user, 7);
 
-//Ejercicio 3
+//Punto 3
 
 function abrirNuevaVentana(vurl, vname){
-	window.open(vurl, vname);
+	const w = window.open(vurl, vname, "scrollbars=yes,width=500");
+}
+
+//Punto 4
+abrirNuevaVentana("https://www.google.es", "x");
+
+//Punto 5
+
+function obtenerParametrosUrl(){
+	const locstr = window.location.search;
+	console.log(locstr);
 }
