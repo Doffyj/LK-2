@@ -9,3 +9,9 @@ function crearCookie(cnombre, cvalue, cduracion){
 
 //Ejercicio 2
 crearCookie("Juan", user, 7);
+
+//Ejercicio 3
+
+function abrirNuevaVentana(vurl, vname){
+	window.open(vurl, vname);
+}
