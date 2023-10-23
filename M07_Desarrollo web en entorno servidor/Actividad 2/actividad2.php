@@ -51,7 +51,7 @@
 		];
 		$dni = $_POST["dni"];
 		echo "El DNI completo es: $dni";
-		echo $letra_dni[$dni%21];
+		echo $letra_dni[$dni%23];
 		?>
 		<form method="POST" action="actividad2.php">
 			DNI:<input type="number" name="dni">
