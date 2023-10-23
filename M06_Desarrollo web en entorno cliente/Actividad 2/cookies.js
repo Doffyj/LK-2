@@ -1,3 +1,5 @@
+//Ejercicio 1
+//cnombre -> username, cvalue ->tipo de usuario (user), cduracion -> duracion en dias que pasaremos a ms
 function crearCookie(cnombre, cvalue, cduracion){
 	const d = new Date();
 	d.setTime(d.getTime() + (cduracion*24*60*60*1000));
