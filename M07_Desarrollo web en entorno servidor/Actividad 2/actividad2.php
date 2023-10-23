@@ -23,5 +23,39 @@
 			</fieldset>
 			<input type="submit" name="enviar"/>
 		</form>
+		<?php
+		$letra_dni = [
+			0 => "T",
+			1 => "R",
+			2 => "W",
+			3 => "A",
+			4 => "G",
+			5 => "M",
+			6 => "Y",
+			7 => "F",
+			8 => "P",
+			9 => "D",
+			10 => "X",
+			11 => "B",
+			12 => "N",
+			13 => "J",
+			14 => "Z",
+			15 => "S",
+			16 => "Q",
+			17 => "V",
+			18 => "H",
+			19 => "L",
+			20 => "C",
+			21 => "K",
+			22 => "E"
+		];
+		$dni = $_POST["dni"];
+		echo "El DNI completo es: $dni";
+		echo $letra_dni[$dni%21];
+		?>
+		<form method="POST" action="actividad2.php">
+			DNI:<input type="number" name="dni">
+			<input type="submit" name="submit" value="Submit">
+		</form>
 	</body>
 </html>
