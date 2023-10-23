@@ -6,3 +6,6 @@ function crearCookie(cnombre, cvalue, cduracion){
 	let expira = "expires=" + d.toUTCString();
 	document.cookie = cnombre + "=" + cvalue + ";" + expira + ";path=/";
 }
+
+//Ejercicio 2
+crearCookie("Juan", user, 7);
