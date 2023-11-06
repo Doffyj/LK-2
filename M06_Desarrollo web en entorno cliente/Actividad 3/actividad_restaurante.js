@@ -90,3 +90,31 @@ function mostrarMenus() {
 }
 
 document.addEventListener("DOMContentLoaded", mostrarMenus);
+
+//Ej10
+
+document.addEventListener("DOMContentLoaded", function () {
+	const btnAgregarPlato = document.getElementById("btnAgregarPlato");
+	const platosContainer = document.getElementById("platos-container");
+  
+	btnAgregarPlato.addEventListener("click", function () {
+	  const nombre = document.getElementById("nombre").value;
+	  const descripcion = document.getElementById("descripcion").value;
+	  const precio = parseFloat(document.getElementById("precio").value);
+  
+	  if (nombre && descripcion && !isNaN(precio)) {
+		const nuevoPlato = new Plato(nombre, descripcion, precio);
+		const platoHTML = nuevoPlato.getHTML();
+		platosContainer.innerHTML += platoHTML;
+		document.getElementById("nombre").value = "";
+		document.getElementById("descripcion").value = "";
+		document.getElementById("precio").value = "";
+	  }
+	});
+});
+
+//Ej11
+
+
+  
+  
