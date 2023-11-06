@@ -28,7 +28,7 @@ const menu = {
 		this.platos.forEach(plato => {
 			menuprint += plato.getHTML();
 		});
-		return html;
+		return menuprint;
 	}
 }
 //Para la comprobación del Ej 5
@@ -39,11 +39,11 @@ function Menu(nombre) {
 }
 
 //Ej 5
-/*
-const menu1 = new Menu("Menú del día");
+
+const menu1 = new Menu("Menu del dia");
 menu1.addPlato(plato1);
-console.log(menu1.getHTML());
-*/
+//console.log(menu1.getHTML());
+
 
 //Ej 6
 
@@ -57,7 +57,8 @@ platosDisponibles.push(plato2);
 //Ej7
 
 function mostrarPlatos() {
-	const menuContainer = document.getElementById("menu-container");
+	const menuContainer = document.getElementById("platos-container");
+	menuContainer.innerHTML = "<h2>Platos disponibles</h2>";
 
 	platosDisponibles.forEach(plato => {
 	  const platoHTML = plato.getHTML();
@@ -66,3 +67,26 @@ function mostrarPlatos() {
 }
 
 document.addEventListener("DOMContentLoaded", mostrarPlatos);
+
+//Ej8
+
+let menusDisponibles = {};
+
+menusDisponibles[menu1.nombre] = menu1;
+
+//Ej9
+
+function mostrarMenus() {
+	const menuContainer = document.getElementById("menus-container");
+	menuContainer.innerHTML = "<h2>Menus disponibles</h2>";
+
+	for (const nombreDelMenu in menusDisponibles) {
+		if (menusDisponibles.hasOwnProperty(nombreDelMenu)) {
+		  const menu = menusDisponibles[nombreDelMenu];
+		  const menuHTML = menu.getHTML();
+		  menuContainer.innerHTML += menuHTML;
+		}
+	}
+}
+
+document.addEventListener("DOMContentLoaded", mostrarMenus);
