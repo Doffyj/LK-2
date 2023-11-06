@@ -39,6 +39,8 @@ function Menu(nombre) {
 }
 
 //Ej 5
+/*
 const menu1 = new Menu("Menú del día");
 menu1.addPlato(plato1);
 console.log(menu1.getHTML());
+*/
