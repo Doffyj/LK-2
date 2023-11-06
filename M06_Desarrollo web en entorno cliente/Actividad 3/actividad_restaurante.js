@@ -7,14 +7,14 @@ class Plato {
 	}
 
 	getHTML() {
-		return `<div class="plato"><h3>${this.nombre}</h3><p>${this.descripcion}</p><span class="precio">${this.precio}€</span></div>`;
+		return `<div class="plato"><h3>${this.nombre}</h3><p>${this.descripcion}</p><span class="precio">${this.precio}\u20ac</span></div>`;
 	}
 }
 //Ej 3
-/*
+
 const plato1 = new Plato("Hamburguesa", "Deliciosa hamburguesa con carne jugosa y queso derretido", 10);
-console.log(plato1.getHTML());
-*/
+//console.log(plato1.getHTML());
+
 
 //Ej 4
 const menu = {
@@ -24,7 +24,7 @@ const menu = {
 		this.platos.push(plato);
 	},
 	getHTML: function() {
-		let menuprint = <h1>${this.nombre}</h1>
+		let menuprint = `<h1>${this.nombre}</h1>`
 		this.platos.forEach(plato => {
 			menuprint += plato.getHTML();
 		});
@@ -44,3 +44,25 @@ const menu1 = new Menu("Menú del día");
 menu1.addPlato(plato1);
 console.log(menu1.getHTML());
 */
+
+//Ej 6
+
+var platosDisponibles = new Array();
+
+const plato2 = new Plato("Spaguettis a la carbonara", "Yemas de huevos, queso (Pecorino Romano), guanciale y pimienta negra", 8);
+
+platosDisponibles.push(plato1);
+platosDisponibles.push(plato2);
+
+//Ej7
+
+function mostrarPlatos() {
+	const menuContainer = document.getElementById("menu-container");
+
+	platosDisponibles.forEach(plato => {
+	  const platoHTML = plato.getHTML();
+	  menuContainer.innerHTML += platoHTML;
+	});
+}
+
+document.addEventListener("DOMContentLoaded", mostrarPlatos);
