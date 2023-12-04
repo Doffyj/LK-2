@@ -12,7 +12,20 @@
     </header>
 
     <main>
-        <p>Body de la página.</p>
+        <h2>Gestión de Reservas de Gimnasio</h2>
+
+        <form id="reservaForm">
+            <label for="nombreCliente">Nombre del Cliente:</label>
+            <input type="text" id="nombreCliente" name="nombreCliente" required>
+
+            <label for="tipoClase">Tipo de Clase:</label>
+            <input type="text" id="tipoClase" name="tipoClase" required>
+
+            <label for="fechaReserva">Fecha de Reserva:</label>
+            <input type="date" id="fechaReserva" name="fechaReserva" required>
+
+            <button type="submit">Reservar</button>
+        </form>
     </main>
 
     <footer>
